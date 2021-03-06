@@ -1,5 +1,11 @@
 package com.company;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.maxBy;
+import static java.util.stream.Collectors.summingInt;
 
 public class Main {
 
@@ -65,6 +71,31 @@ public class Main {
         else {
             System.out.println(district2.getTitle() + " is better based on the average level of Officers ");
         }
+        System.out.println();
+
+//  Create three Lawyers as objects.
+//  Create an arraylist for Lawyers storing.
+//  Put all Lawyers in it. Print out information about all Lawyers.
+        ArrayList<Lawyer> allTheLawyers = new ArrayList<>(asList(
+                new Lawyer("Denny", "Crane", 111, 62),
+                new Lawyer("Shirley", "Schmidt", 222, 53),
+                new Lawyer("Alan", "Shore", 333, 98)
+        ));
+        System.out.println("The Lawyers are");
+        for (Lawyer lawyers : allTheLawyers) {
+            System.out.println(lawyers);
+        }
+        System.out.println();
+
+//  Find out the total number of the crimes in which solving the Lawyers were involved -> https://www.baeldung.com/java-8-collectors
+        System.out.println("The total number of crimes solved by lawyers: " +
+                allTheLawyers.stream().collect(summingInt(Lawyer :: getHelpedInCrimeSolving)));
+
+//  Find out which Lawyer has helped the most to solve crimes.
+        System.out.println("Best Lawyer: " +
+                allTheLawyers.stream()
+                        .max(Comparator.comparingInt(Lawyer :: getHelpedInCrimeSolving)));
 
     }
+
 }
