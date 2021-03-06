@@ -1,4 +1,5 @@
 package com.company;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -58,14 +59,13 @@ public class Main {
 
 //  Calculate the average level of both Districts.
         System.out.println("Average level of both districts is: " +
-                (district1.calculateAvgLevelInDistrict() + district2.calculateAvgLevelInDistrict()) / 2);
+                (district1.calculateAvgLevelInDistrict() + district2.calculateAvgLevelInDistrict()) / districts.size());
         System.out.println();
 
 //  Find out which District is the best based on the average level of Officers.
         if (district1.calculateAvgLevelInDistrict() > district2.calculateAvgLevelInDistrict()) {
             System.out.println(district1.getTitle() + " is better based on the average level of Officers ");
-        }
-        else {
+        } else {
             System.out.println(district2.getTitle() + " is better based on the average level of Officers ");
         }
         System.out.println();
@@ -91,7 +91,7 @@ public class Main {
 //  Find out which Lawyer has helped the most to solve crimes.
         System.out.println("Best Lawyer: " +
                 allTheLawyers.stream()
-                        .max(Comparator.comparingInt(Lawyer :: getHelpedInCrimeSolving)));
+                        .max(Comparator.comparingInt(Lawyer::getHelpedInCrimeSolving)));
 
     }
 

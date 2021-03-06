@@ -1,8 +1,5 @@
 package com.company;
-
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class District {
 
@@ -35,7 +32,7 @@ public class District {
     }
 
     public float calculateAvgLevelInDistrict() {
-        int totalLevel = 0;
+        float totalLevel = 0;
         for (Officer officer : officersInTheDistrict) {
             totalLevel += officer.calculatedLevel();
         }
