@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.summingInt;
 
 public class Main {
 
@@ -52,7 +51,7 @@ public class Main {
         }
 
 //  Calculate how many Officers are in both Districts.
-        int totalOfficers = 0;
+        int totalOfficers;
         totalOfficers = district1.getOfficersInTheDistrict().size() + district2.getOfficersInTheDistrict().size();
         System.out.println("Officers in both districts: " + totalOfficers);
         System.out.println();
