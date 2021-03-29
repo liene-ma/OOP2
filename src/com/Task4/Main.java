@@ -93,8 +93,7 @@ public class Main {
 
 //  Find out which Lawyer has helped the most to solve crimes.
         System.out.println("Best Lawyer: " +
-                allTheLawyers.stream()
-                        .max(Comparator.comparingInt(Lawyer::getHelpedInCrimeSolving)));
+                allTheLawyers.stream().max(Comparator.comparingInt(Lawyer::getHelpedInCrimeSolving)));
 
     }
 
