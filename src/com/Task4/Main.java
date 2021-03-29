@@ -89,8 +89,7 @@ public class Main {
         System.out.println();
 
 //  Find out the total number of the crimes in which solving the Lawyers were involved -> https://www.baeldung.com/java-8-collectors
-        System.out.println("The total number of crimes solved by lawyers: " +
-                (Integer) allTheLawyers.stream().mapToInt(Lawyer::getHelpedInCrimeSolving).sum());
+        System.out.println("The total number of crimes solved by lawyers: " + (Integer) allTheLawyers.stream().mapToInt(Lawyer::getHelpedInCrimeSolving).sum());
 
 //  Find out which Lawyer has helped the most to solve crimes.
         System.out.println("Best Lawyer: " +
