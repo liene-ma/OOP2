@@ -1,4 +1,4 @@
-package com.company;
+package com.Tasks1to3;
 
 
 public class Person {
